@@ -1,6 +1,7 @@
 import Link from "next/link"
 
-export const getStaticProps = async () => {
+export const getStaticProps = async (context) => {
+    console.log(context)
     const res = await fetch('https://jsonplaceholder.typicode.com/posts') 
     const data = await res.json()
 
